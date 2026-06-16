@@ -9,6 +9,8 @@ fetch(url, {options})
 // function to load up the pokemon image
 // let nextQuestion = 0;
 let numQuestion = 0;
+let randomNum;
+let correct = 0;
 
 // User will start the game, this will trigger the first question
 
@@ -16,18 +18,24 @@ let numQuestion = 0;
 // once user answers the question then the next button will come back
     // whether or not the user is correct or wrong
 async function loadImage(){
+    // if(numQuestion === 11){
+    //     document.getElementById("number").innerHTML = `DONE GAME`;
+    // } else{
+        
+    // }
     // make the next button question disappear
     document.getElementById("next").style.visibility = "hidden";
+    document.getElementById("check").style.visibility = "visible";
 
     numQuestion += 1;
-    document.getElementById("question").innerHTML = `<h2 id="question">Question ${numQuestion}/10 <br> type the answer for what pokemon is shown</h2>`
+    document.getElementById("question").innerHTML = `<h2 id="question">Question ${numQuestion}/10 <br> type the answer for what pokemon is shown <br> ${correct}/10 points</h2>`
     //Generate random number from 0 to 300
     try{
-        const num = Math.floor(Math.random() * 301);
+        randomNum = Math.floor(Math.random() * 301);
 
        
 
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${num}`);
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${randomNum}`);
 
         if(!response.ok){
             throw new Error("Could not fetch resource");
@@ -46,13 +54,14 @@ async function loadImage(){
         console.error(error);
     }
 
-
-       
+document.getElementById("check").innerHTML = `<button onclick="checkAnswer(randomNum)">CHECK</button>`;
+   
+  }     
 async function checkAnswer(num){
     try{
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${num}`);
             const data = await response.json();
-            // const dataName = data.froms.0.name;
+            const dataName = data.name;
 
         if(!response.ok){
             throw new Error("Could not fetch resource");
@@ -62,17 +71,27 @@ async function checkAnswer(num){
             // then tell the user they are correct
         // if not 
             // then tell the user they are wrong
-        if(pokemonName === 'yes'){
+        if(pokemonName === dataName){
+            document.getElementById("number").innerHTML=`CORECCTTT!!!!`;
+             document.getElementById("next").style.visibility = "visible";
+                document.getElementById("check").style.visibility = "hidden";
+                correct += 1;
 
+        }
+        else if (pokemonName != dataName){
+            document.getElementById("number").innerHTML=`Wrong :( <br> The correct answer is "${dataName}"`;  
+            document.getElementById("next").style.visibility = "visible";
+            document.getElementById("check").style.visibility = "hidden";
         }
     }
        catch(error){
         console.error(error);
     }
+    document.getElementById("question").innerHTML = `<h2 id="question">Question ${numQuestion}/10 <br> type the answer for what pokemon is shown <br> ${correct}/10 points</h2>`
 }
 
 
-}
+
 
 async function fetchData(){
 
