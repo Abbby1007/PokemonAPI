@@ -18,11 +18,11 @@ let correct = 0;
 // once user answers the question then the next button will come back
     // whether or not the user is correct or wrong
 async function loadImage(){
-    // if(numQuestion === 11){
-    //     document.getElementById("number").innerHTML = `DONE GAME`;
-    // } else{
-        
-    // }
+    if(numQuestion === 10){
+        document.getElementById("number").innerHTML = `DONE GAME`;
+        return;
+          document.getElementById("next").style.visibility = "hidden";
+    } 
     // make the next button question disappear
     document.getElementById("next").style.visibility = "hidden";
     document.getElementById("check").style.visibility = "visible";
