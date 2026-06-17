@@ -12,6 +12,8 @@ let numQuestion = 0;
 let randomNum;
 let correct = 0;
 
+
+
 // User will start the game, this will trigger the first question
 
 // Then user will get question, the next button will disappear. 
@@ -24,6 +26,8 @@ async function loadImage(){
           document.getElementById("next").style.visibility = "hidden";
     } 
     // make the next button question disappear
+    document.getElementById("start").style.visibility = "hidden";
+    document.getElementById("first").style.display = `block`;
     document.getElementById("next").style.visibility = "hidden";
     document.getElementById("check").style.visibility = "visible";
 
@@ -72,14 +76,14 @@ async function checkAnswer(num){
         // if not 
             // then tell the user they are wrong
         if(pokemonName === dataName){
-            document.getElementById("number").innerHTML=`CORECCTTT!!!!`;
+            document.getElementById("number").innerHTML=`<p>CORECCTTT!!!!</p>`;
              document.getElementById("next").style.visibility = "visible";
                 document.getElementById("check").style.visibility = "hidden";
                 correct += 1;
 
         }
         else if (pokemonName != dataName){
-            document.getElementById("number").innerHTML=`Wrong :( <br> The correct answer is "${dataName}"`;  
+            document.getElementById("number").innerHTML=`<p>Wrong :( <br> The correct answer is "${dataName}"</p>`;  
             document.getElementById("next").style.visibility = "visible";
             document.getElementById("check").style.visibility = "hidden";
         }
