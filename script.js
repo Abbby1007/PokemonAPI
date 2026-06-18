@@ -12,7 +12,7 @@ let numQuestion = 0;
 let randomNum;
 let correct = 0;
 
-
+// SCRIPT FOR THE NAME QUIZZ
 
 // User will start the game, this will trigger the first question
 

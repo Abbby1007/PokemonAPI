@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Quiz</title>
+    <script src="script.js"></script>
+     <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+       <div id="container">
+        <span id="start">
+            <h3> NAME QUIZ</h3>
+            <p> Press the START button when you are ready to begin </p>
+            <button  onclick="loadImage()" >START</button>
+        </span>
+  
+        <span id="first" style="display:none">
+        <h2 id="question" >Question -/10 <br> Type the name of the Pokemon shown below <br> -/10 points</h2>
+         <img  src="" alt="Pokemon Sprite" id="pokemonSprite" style="display:none">
+        <input type="text" id="pokemonName" placeholder="Enter Pokemon name">
+        <p id="number"></p>
+        <button id="next" onclick="loadImage()">NEXT</button> <span id="check"> </span>
+        </span>
+
+</div> 
+</body>
+</html>
