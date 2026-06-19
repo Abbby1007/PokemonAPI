@@ -53,6 +53,7 @@ async function loadImage(){
     // GENERATE THE SPRITE
         const data = await response.json();
         const pokemonSprite = data.sprites.front_default;
+        // figure out way to access type of pokemon
         const dataName = data.name;
          document.getElementById("number").innerHTML = `${dataName}`;
         const imgElement = document.getElementById(`pokemonSprite`);
