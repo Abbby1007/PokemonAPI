@@ -10,4 +10,27 @@ img {
 
 #correct{
     color:green;
+    font-size: 2rem;
+}
+
+#wrong{
+    color:red;
+    font-size: 2rem;
+}
+
+#done{
+    color:gold;
+    font-size: 2rem;
+}
+
+#title{
+    font-size:2rem;
+}
+
+#question{
+font-size: 2rem;
+}
+
+#instructions{
+    font-size: 1.5rem;
 }
