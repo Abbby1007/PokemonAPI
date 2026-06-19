@@ -54,7 +54,7 @@ async function loadImage(){
         const data = await response.json();
         const pokemonSprite = data.sprites.front_default;
         // figure out way to access type of pokemon
-        const dataName = data.name;
+        const dataName = data.types[0].type.name;
          document.getElementById("number").innerHTML = `${dataName}`;
         const imgElement = document.getElementById(`pokemonSprite`);
 
@@ -72,7 +72,7 @@ async function checkAnswer(num){
     try{
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${num}`);
             const data = await response.json();
-            const dataName = data.name;
+        const dataName = data.types[0].type.name;
 
         if(!response.ok){
             throw new Error("Could not fetch resource");
