@@ -34,3 +34,27 @@ font-size: 2rem;
 #instructions{
     font-size: 1.5rem;
 }
+
+#nameBody{
+    background-color:#b19cd9;
+}
+
+button{
+    border-radius: 5px;
+    cursor: pointer;
+      color: black;
+      background-color: #B1B8E0;
+       font-size: 1.5vw;
+}
+
+button:hover{
+    background-color: #e1d8f0;
+}
+
+input{
+    border-radius:5px;
+}
+
+::placeholder {
+  color: black;
+}
