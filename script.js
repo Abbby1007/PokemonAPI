@@ -54,7 +54,6 @@ async function loadImage(){
         const data = await response.json();
         const pokemonSprite = data.sprites.front_default;
         const dataName = data.name;
-         document.getElementById("number").innerHTML = `${dataName}`;
         const imgElement = document.getElementById(`pokemonSprite`);
 
     imgElement.src = pokemonSprite;
