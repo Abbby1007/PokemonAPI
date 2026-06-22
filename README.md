@@ -16,7 +16,5 @@ When user is correct
 <img width="955" height="470" alt="Screenshot 2026-06-22 111535" src="https://github.com/user-attachments/assets/a78c6a16-2c0f-4377-9598-5583fc5509b1" />
 
 When user finsihes the 10 questions
-<img width="956" height="473" alt="Screenshot 2026-06-22 111912" src="https://github.com/user-attachments/assets/ca3252eb-c228-44da-b132-8dc48c61f540" />
-
-
+<img width="956" height="473" alt="Screenshot 2026-06-22 111912" src="https://github.com/user-attachments/assets/9cd9bb68-4aa5-4d16-9444-2a5413f2507c" />
 
