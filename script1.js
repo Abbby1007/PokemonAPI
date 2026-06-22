@@ -55,6 +55,7 @@ async function loadImage(){
         const pokemonSprite = data.sprites.front_default;
         // figure out way to access type of pokemon
         const dataName = data.types[0].type.name;
+         document.getElementById("number").innerHTML = ``;
         const imgElement = document.getElementById(`pokemonSprite`);
 
     imgElement.src = pokemonSprite;
