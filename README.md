@@ -7,7 +7,7 @@ The demo link: https://abbby1007.github.io/PokemonAPI/
 I made the game with the purpose of learning about APIs. When I watched a API tutorial video I found myself needing to watch four other videos to understand different concepts. It was really fun to work with outside data and I look forward to watching other API videos.
 
 Image of Home Screen
-<img width="958" height="475" alt="Screenshot 2026-06-22 111153" src="https://github.com/user-attachments/assets/913c46cd-324e-4852-9a25-f6c019a7461f" />
+<img width="958" height="475" alt="Screenshot 2026-06-23 202822" src="https://github.com/user-attachments/assets/6e0f8288-4800-4abc-8c44-3969db636ca0" />
 
 Image of When user is wrong
 <img width="958" height="473" alt="Screenshot 2026-06-22 111255" src="https://github.com/user-attachments/assets/c969b1d8-fb04-48b8-92f2-42da146e68dc" />
