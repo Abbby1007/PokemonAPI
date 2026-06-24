@@ -38,7 +38,7 @@ async function loadImage(){
     document.getElementById("check").style.visibility = "visible";
 
     numQuestion += 1;
-    document.getElementById("question").innerHTML = `<h2 id="question">Question ${numQuestion}/10 <br> <span id="instructions"> Type the name of the Pokemon shown below </span> <br> ${correct}/10 points</h2>`
+    document.getElementById("question").innerHTML = `<h2 id="question">Question ${numQuestion}/10 <br> <span id="instructions"> Enter the type of the Pokemon shown below </span> <br> ${correct}/10 points</h2>`
     //Generate random number from 0 to 300
     try{
         randomNum = Math.floor(Math.random() * 301);
@@ -98,7 +98,7 @@ async function checkAnswer(num){
        catch(error){
         console.error(error);
     }
-    document.getElementById("question").innerHTML = `<h2 id="question">Question ${numQuestion}/10 <br> <span id="instructions"> Type the type of the Pokemon shown below </span> <br> ${correct}/10 points</h2>`
+    document.getElementById("question").innerHTML = `<h2 id="question">Question ${numQuestion}/10 <br> <span id="instructions"> Enter the type of the Pokemon shown below </span> <br> ${correct}/10 points</h2>`
 }
 
 
